@@ -15,7 +15,7 @@ const Chat = () => {
 
     if (response.ok) {
       const data = await response.json();
-      console.log("AI reply:", data.reply);
+      console.log("data received is ", data);
       setChat([...chat, { user: message, bot: data.reply }]);
       setMessage("");
     } else {
